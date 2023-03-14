@@ -6,9 +6,9 @@ on:
 jobs:
   print-env:
     runs-on: ubuntu-latest
+    env:
+      DUMMY: ${{ secrets.DUMMY }}
     steps:
       - name: print
-        env:
-          DUMMY: ${{ secrets.DUMMY }}
         run: |
           printenv
