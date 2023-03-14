@@ -6,7 +6,7 @@ on:
 jobs:
   print-env:
     runs-on: ubuntu-latest
-    environment: dev
+    environment: ${{ github.ref_name }}
     env:
       DUMMY: ${{ secrets.DUMMY }}
     steps:
